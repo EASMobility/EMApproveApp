@@ -1,0 +1,126 @@
+Ext.define("eaApprove.view.MyTabs", {
+extend: 'Ext.tab.Panel',
+
+xtype: 'mytabsview',
+id:'mytabsview',
+requires: [
+                        'eaApprove.view.Worklistsdue',
+                        'eaApprove.view.Worklists',
+                        'eaApprove.view.Settings',
+                        'eaApprove.view.About',
+                        'eaApprove.view.contact.Show',
+                        
+        ],
+config: {
+width:'100%',
+height:'90%',
+tabBarPosition: 'bottom',
+activeItem:3,
+//indicator: false,
+items: [
+{
+xtype: 'contacts',
+title: '<img class="icn" src="resources/images/startDate_ico.png"/><br/>Start Date',
+name:'Start Date'
+//title: 'Start Date',
+//cls:'x-tabbar'
+//id: 'Start Date',
+//iconCls: 'startDate'
+},
+{
+xtype: 'contactsdue',
+title: '<img class="icn" src="resources/images/dueDate_ico.png"/><br/>Due Date',
+name:'Due Date'
+//title: 'Due Date',
+//id: 'Due Date',
+//iconCls: 'dueDate'
+},         
+
+{
+title: '<img class="icn"  src="resources/images/category_ico.png"/><br/>Category',
+name:'Category',
+//title: 'Category',
+//id: 'Category',
+//iconCls: 'add',
+disabled: true,
+disabledCls: null
+},
+
+{
+xtype: 'settings',
+title: '<img class="icn" src="resources/images/settings_ico.png"/><br/>Settings',
+name:'Settings'
+//title: 'Settings',
+//id: 'settings',
+//iconCls: 'settings'
+},
+{
+xtype: 'About',
+name:'About',
+title: '<img class="icn" src="resources/images/about_ico.png"/><br/>About'
+//title: 'About',
+//id: 'About',
+//iconCls: 'about'
+},
+],
+     listeners: {
+                activeitemchange: function (tabPanel, tab, oldTab) {
+                  //  alert('Current tab: ' + tab.config.title);
+                                                  bar = Ext.getCmp('mainview').getNavigationBar();
+                                                                        //bar.backButton.setIconCls('home');
+                                                //bar.backButton.setIconMask(true);
+               // bar.backButton.setUi('plain');
+                //bar.backButton.setText('');
+                bar.setDefaultBackButtonText('Worklist');    
+                                                  activetab=tab.config.name;
+                                                  console.log(tab.config);
+                                                            if(tab.config.name==='Start Date'){
+                                                            bar.titleComponent.setTitle('Worklist');
+                                                //if(localStorage.getItem('sessionToken')!=null && localStorage.getItem('userid')){
+                                                                        //alert('hi session....');
+                                                            console.log(localStorage.getItem('sessionToken'));
+                                                            worklistrequest_database('Start Date');
+                                                //          }                                                          
+                                                            }else if(tab.config.name==='Due Date'){
+                                                    bar.titleComponent.setTitle('Worklist');
+                                                                                                
+                                                            //          if(localStorage.getItem('sessionToken')!=null && localStorage.getItem('userid'){
+                                                            //          alert('hi session....');
+                                                            console.log(localStorage.getItem('sessionToken'));
+                                                            worklistrequest_database('Due Date');
+                                                            //}
+                                                            }
+                                                            
+                                                            else if(tab.config.name==='Settings'){
+                                                            
+                                                            bar.titleComponent.setTitle(tab.config.name);
+                                                            //alert(Ext.getCmp('mainview').getNavigationBar().title);
+                                                            }else if(tab.config.name==='Category'){
+                                                            }else if(tab.config.name==='About'){
+                                                            
+                                                            bar.titleComponent.setTitle(tab.config.name);
+                                                            //alert(Ext.getCmp('mainview').getNavigationBar().title);
+                                                            }
+                },
+                        
+            }, // listeners
+                                                                          activate:function( field, newActiveItem, oldActiveItem, eOpts)
+                                                            {
+                                                            var bar1 = Ext.getCmp('mainview').getNavigationBar();
+                                                            console.log("hiiiiiiii");
+                                                              bar1.setDefaultBackButtonText('Worklist');    
+                                                              if(tabselection==true){
+                                                            //   Ext.getCmp('emptylist').setTitle(' ');
+                                                            //console.log("hiiiiiiii");
+                                                              this.setActiveItem(0);                                                             
+                                                              }
+                                                              else if(tabselection!=true){
+                                                              // alert("hi");
+                                                              // console.log(Ext.getCmp('emptylist'));
+                                                               //  Ext.getCmp('emptylist').setTitle('No Worklist items');
+                                                              }
+                                                            
+                                                            }// activeitemchange 
+}, indicator:false
+
+});

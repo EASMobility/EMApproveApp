@@ -1,0 +1,3 @@
+<modify-entry
+   name="www"
+   schedule="delete"/>

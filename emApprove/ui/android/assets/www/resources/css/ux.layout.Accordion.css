@@ -1,0 +1,16 @@
+.x-layout-accordion-item.x-layout-accordion-item-anim {
+    -webkit-transition : height 300ms ease-in;
+}
+
+.x-accordion-arrow {
+	padding            : 0.6em !important;
+    background         : transparent url('data:;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAJCAYAAAGefZb8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWBJREFUeNpi+P//fygQMzBKBfcyAGkGgABiBPGAIIlREijCCGQBBBADRAoCQGyAAAJxFEHKgFiCya96RSBQlUxU89p0sCnsbCyOP3/92Q8QQAwOBQsiodpEocr5QRzviqVpYJUg4Gyk1LqoKqAqs3/rpE1Hb+aDxAACCKRyNVQHMl7G8Pzt599Axkkkwb1vP377z8Dr2cbw/ssPkPHb/v3/v/Lbj9//eTzaGJh4udgZZEP7GH/8+uP57++/MLGAbkY+bnYGuAN+/v7DxsDAyMLOyvwNxAcIMIY7T9/thTr7IsjHWBwCwkJAa46DFD16+eEsA59XO4N7yeLMV++//INqPgDEglDFXEC8FST4AejGwJqVZSD3wp3w6etPBi8L1ep5ZX4t3JxsDMAIeAkMefGfv/8yZPZt6Vx98FoFH9AfIADXBAMgzZHOOr25QebZ87adXzRn27lMXk72v4yMCDUAXg38+riFTEIAAAAASUVORK5CYII=') no-repeat center center !important;
+
+    /* For arrow animation */
+    -webkit-transition : -webkit-transform 300ms ease-in;
+}
+
+.x-accordion-arrow-expanded {
+    -webkit-transform : rotate(180deg);
+}
+

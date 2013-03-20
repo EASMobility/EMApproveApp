@@ -1,0 +1,110 @@
+Ext.define("eaApprove.view.contact.ReportItems", {
+extend: 'Ext.ActionSheet',
+xtype: 'reportItemsView',
+id: 'reportItemsView',
+
+ requires: [
+	    'eaApprove.view.contact.ApproveCmts'
+		
+        ],
+
+config: {
+	  //bottom: '120',
+	 
+	  //right:'0',
+	 
+	  //height: '240',
+      //width: '100%',
+	  //baseCls: 'x-report-background',
+	 // border: '0',
+		       /*  layout:{
+				                type:'vbox',
+				                align:'stretch'
+				                
+	                }, */
+	                
+	                items: [
+					{
+                        xtype: 'title',
+                        title: 'Are you sure you wish to approve this item?',
+						cls:'actioncls'
+                    },
+            			
+            			 { 
+            			 	  // xtype: 'button',
+							  text: 'Approve',
+					  id:'approveMainButton',		   
+				 	   
+				 	 // height:'40',
+					  //align: 'center',
+				 	 // width: '360',
+				 	   //ui: 'round',
+				 	 
+				 	   
+				 	    handler:function(){
+				 	    	if (check_network() == 'No network connection'||check_network() == 'Unknown connection')
+							{
+								alert('No network connection');	
+							}else{  
+				this.fireEvent('onApproveMainClick', this);
+				Ext.getCmp('mainview').getNavigationBar().disable();
+						//console.log(Ext.getCmp('mainview'));
+						 var button1 = Ext.getCmp('mainview').getNavigationBar().query('button');
+			//alert(button1);
+			button1[0].enable();
+							  Ext.getCmp('reportItemsView').hide();	 
+							    }
+							 }
+				 	  }, 
+					  
+					  {
+				 	         //xtype: 'button',
+							  text: 'Approve With Comments',
+							 id:'approveCommentButton',
+				 	      // height:'40',
+				 	      //  width: '360',
+				 	         //ui: 'round',
+							 handler:function(){
+							  
+				this.fireEvent('onApproveCommentsClick', this);
+						//console.log(Ext.getCmp('mainview'));
+						//alert("hiiiiii");
+						Ext.getCmp('approveText').setValue(' ');
+						 var button2 = Ext.getCmp('mainview').getNavigationBar().query('button');
+			//alert(button2);
+			button2[0].enable();
+							  Ext.getCmp('reportItemsView').hide();	 
+							 
+							 }
+				                 },	
+								 
+								 
+								 {
+				 	         //xtype: 'button',
+				 	         text: 'Cancel',
+							// id:'appcancel',
+				 	        //height:'40',
+				 	      // width: '360',
+				 	        // ui: 'round',
+							 handler:function(){
+							var button4 = Ext.getCmp('mainview').getNavigationBar().query('button');
+			//alert(button4);
+			button4[0].enable();						 
+							 Ext.getCmp('reportItemsView').hide();
+							// Ext.getCmp('mainview').getNavigationBar().enable();
+							 
+							 }
+				 	         
+				 	         }
+				 	         
+	                 	]
+
+	 
+
+
+	},
+		
+     listeners: {
+                
+		}
+});
