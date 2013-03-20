@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job-scheduling-data
+	xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData 
+        http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+	version="1.8">
+ 
+	<schedule>
+		<job>
+			<name>PRDataLoad</name>
+			<group>GroupDataLoad</group>
+			<description>Fetch PR data from ERP and store it in Redis cache</description>
+			<job-class>com.ea.em.erp.sync.PRDataSync</job-class>
+		</job>
+		<job>
+			<name>ExpenseDataLoad</name>
+			<group>GroupDataLoad</group>
+			<description>Fetch iExpense data from ERP and store it in Redis cache</description>
+			<job-class>com.ea.em.erp.sync.ExpenseDataSync</job-class>
+		</job>
+		<trigger>
+			<cron>
+				<name>PRDataLoadTrigger</name>
+				<job-name>PRDataLoad</job-name>
+				<job-group>GroupDataLoad</job-group>
+				<!-- It will run every 5 minutes -->
+				<cron-expression>0 0/5 * * * ?</cron-expression>
+			</cron>
+		</trigger>
+		<trigger>
+			<cron>
+				<name>ExpenseDataLoadTrigger</name>
+				<job-name>ExpenseDataLoad</job-name>
+				<job-group>GroupDataLoad</job-group>
+				<!-- It will run every 5 minutes -->
+				<cron-expression>0 0/2 * * * ?</cron-expression>
+			</cron>
+		</trigger>
+	</schedule>
+</job-scheduling-data>
