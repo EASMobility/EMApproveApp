@@ -1,0 +1,51 @@
+{"QueryWorklistPRApprRes":
+   {
+    "Tid": "001",
+    "SessionTokenId" : "Abcd12345",
+    "Status": 
+    {
+      "Code": "200",
+      "Description": "Ok"
+    },
+    "PurchaseRequisition":   
+    [{   
+	"NOTIFICATIONID": "2042730",
+    "ITEMKEY": "237183-726367",
+    "REQUISITIONHEADERID": "11223344551",
+    "REQUISITIONNUMBER": "1104044188",
+	"DESCRIPTION": "Test  Desription",
+	"Amount": "10,000 USD",
+	"MESSAGENAME" : "POREQ_APPROVE_SIMPLE_JRAD",
+	"STATUS" : "Awaiting Approval",   
+	"APPROVALREQUESTEDDATE" : "Fri Nov 16 2012 00:11:16 GMT-0800 (PST)",
+	"APPROVEDDATE" : "06-AUG-12",        
+	"APPROVALREQUESTEDBY" : "Tue Nov 20 2012 00:11:16 GMT-0800 (PST)",           
+	"EMERGENCYPONUM": "",   
+	"APPROVEREMPLOYEENUMBER" : "116401",   
+	"FROMUSER" : "HU, JAMIE",  
+	"TOUSER" : "LEE, MICHAEL",  
+	"REQUESTOR" : "SIVAKUMAR, KAUSHIK",  
+	"REQUESTOREMPLOYEENUMBER" : "826258"    
+    },
+	{   
+	"NOTIFICATIONID": "2042733",
+    "ITEMKEY": "237183-726367",
+    "REQUISITIONHEADERID": "1122334455",
+    "REQUISITIONNUMBER": "1104044188",
+	"DESCRIPTION": "Test  Desription",
+	"Amount": "10,000 USD",
+	"MESSAGENAME" : "POREQ_APPROVE_SIMPLE_JRAD",
+	"STATUS" : "Awaiting Approval",   
+	"APPROVALREQUESTEDDATE" : "Fri Nov 16 2012 00:11:16 GMT-0800 (PST)",
+	"APPROVEDDATE" : "06-AUG-12",        
+	"APPROVALREQUESTEDBY" : "Tue Nov 20 2012 00:11:16 GMT-0800 (PST)",           
+	"EMERGENCYPONUM": "",   
+	"APPROVEREMPLOYEENUMBER" : "116401",   
+	"FROMUSER" : "HL, JOSEPH",  
+	"TOUSER" : "LEE, MICHAEL",  
+	"REQUESTOR" : "SIVAKUMAR, KAUSHIK",  
+	"REQUESTOREMPLOYEENUMBER" : "826258"    
+    }
+	]
+   }
+}

@@ -1,0 +1,88 @@
+Ext.define("eaApprove.view.contact.ReportItemsReject", {
+extend: 'Ext.ActionSheet',
+xtype: 'reportItemsViewReject',
+id: 'reportItemsViewReject',
+
+ requires: [
+	    'eaApprove.view.contact.RejectCmts'
+		
+        ],
+
+config: {
+	 
+	 
+	                
+	                items: [
+            			{
+                        xtype: 'title',
+                        title: 'Are you sure you wish to reject this item?',
+						cls:'actioncls'
+                    },
+            			 { 
+            			 	   //xtype: 'button',
+				 	   text: 'Reject',
+					   id:'rejectMainButton',
+				 	  // height:'40',
+				 	 //  width: '360',
+				 	  // ui: 'round',
+				 	 
+				 	   
+				 	   handler:function(){
+				 		  if (check_network() == 'No network connection'||check_network() == 'Unknown connection')
+							{
+								alert('No network connection');	
+							}else{			  
+				this.fireEvent('onRejectMainClick', this);
+						//console.log(Ext.getCmp('mainview'));
+							var button1 = Ext.getCmp('mainview').getNavigationBar().query('button');
+							button1[0].enable();	
+							  Ext.getCmp('reportItemsViewReject').hide();
+												  
+							    }
+							}
+				 	  }, 
+					  {
+				 	         //xtype: 'button',
+							  text: 'Reject With Comments',
+							 id:'approveCommentButton1',
+				 	      // height:'40',
+				 	      //  width: '360',
+				 	         //ui: 'round',
+							 handler:function(){
+							  
+				this.fireEvent('onApproveCommentsClick', this);
+				Ext.getCmp('approveText').setValue(' ');
+						var button2 = Ext.getCmp('mainview').getNavigationBar().query('button');
+			
+			button2[0].enable();
+							  Ext.getCmp('reportItemsViewReject').hide();	 
+							  
+							  
+							 }
+				                 }, 
+								 {
+				 	         xtype: 'button',
+				 	         text: 'Cancel',
+				 	        // height:'40',
+				 	       //  width: '360',
+				 	        // ui: 'round',
+							 handler:function(){
+							 var button1 = Ext.getCmp('mainview').getNavigationBar().query('button');
+							button1[0].enable();
+							 Ext.getCmp('reportItemsViewReject').hide();
+								
+							 }
+				 	         
+				 	         }
+				 	         
+	                 	]
+
+	 
+
+
+	},
+		
+     listeners: {
+                
+		}
+});

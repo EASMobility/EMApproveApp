@@ -1,0 +1,12 @@
+{"QueryPRDetailedInfoRes":{"Tid":"123456","Status":
+{"Code":"200","Text":"SUCCESS"},
+"PRDetailedInfo":[
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441228","LINENUM":"2","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  Production Support/Subscription VMware vSphere 5 Enterprise Plus for 1 processorwith Cisco Nexus 1000V Bundle VS5-NXP-BUN-P-SSS","QUANTITY":"98","UNITPRICE":"355.223"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441229","LINENUM":"3","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  Production VMware vCenter Server 5 Standard for vSphere 5 (Per Instance) VCS5-STD-C","QUANTITY":"1","UNITPRICE":"2397.6"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441232","LINENUM":"4","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, andView  Production SnS for vCenter Server 5 Standard for vSphere 5 VCS5-STD-P-SSS-C","QUANTITY":"1","UNITPRICE":"455.54"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441228","LINENUM":"2","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  Production Support/Subscription VMware vSphere 5 Enterprise Plus for 1 processorwith Cisco Nexus 1000V Bundle VS5-NXP-BUN-P-SSS","QUANTITY":"98","UNITPRICE":"355.223"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441229","LINENUM":"3","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  Production VMware vCenter Server 5 Standard for vSphere 5 (Per Instance) VCS5-STD-C","QUANTITY":"1","UNITPRICE":"2397.6"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441232","LINENUM":"4","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, andView  Production SnS for vCenter Server 5 Standard for vSphere 5 VCS5-STD-P-SSS-C","QUANTITY":"1","UNITPRICE":"455.54"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441233","LINENUM":"5","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  View Premier Starter Kit includes View Manager [10 desktops],[1] vCenter Standard, VS5 Enterprise PLUS, View Composer","QUANTITY":"2","UNITPRICE":"1200"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441225","LINENUM":"1","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  VMware vSphere 5 Enterprise Plus for 1 processor with Cisco Nexus 1000V Bundle VS5-NXP-BUN-C","QUANTITY":"98","UNITPRICE":"1869.6"},
+{"REQUISITIONHEADERID":"253175","REQUISITIONLINEID":"441235","LINENUM":"6","DESCRIPTION":"RQ 5712947 - VMWare VSphere, Vcenter, and View  1 year PRODUCTION Support [24x7] VU5-PR-STR-P-SSS-C","QUANTITY":"2","UNITPRICE":"228"}]}}

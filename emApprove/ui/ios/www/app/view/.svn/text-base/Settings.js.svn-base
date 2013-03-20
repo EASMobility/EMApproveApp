@@ -1,0 +1,217 @@
+Ext.define('eaApprove.view.Settings', {
+    extend: 'Ext.Container',
+	requires:'Ext.Panel',
+    xtype: 'settings',
+config:{
+        //title: 'Login',
+        
+        styleHtmlContent: true,
+		scrollable: {
+        direction: 'vertical'
+    },
+
+    layout:{
+        type: 'vbox',
+
+        },
+	
+    items: [
+	
+	{	xtype:'panel',
+		height:'5%',
+        html:'<div></div>'
+    },
+        {
+		cls:'loginformpanel',
+       xtype: 'fieldset',
+	   style : 'font-size:16px;',
+       iconCls: 'add',
+		
+					items : [
+								{
+									xtype : 'textfield',
+									id : 'username',
+									label : 'Username',
+									//value:'131329',
+									value:'EAMailAddress',
+									maxLength:'50',
+									//placeHolder:'EAMailAddress',
+								},
+								{
+									xtype : 'passwordfield',
+									name : 'password',
+									id : 'password',
+									label : 'Password',
+									value:'Welcome',
+									maxLength:'20',
+									//placeHolder:'******'
+								},
+								{	xtype: 'togglefield',
+								    //cls : 'rightAligned',
+									name: 'signon',
+									id:'toggle',
+									label: 'Sign-on',
+									labelWidth: '30%',
+									listeners: {
+								/* 	change: function () {
+										//alert("hiiiiiiiii");							
+										this.fireEvent('onmyclick', this);
+											//}
+																	
+								} */
+								 change: function(field, thumb, enabled,newValue,oldValue) {
+								 //console.log(newValue);
+								// console.log(oldValue);
+								 if(newValue ===1){
+								 this.fireEvent('onmyclick', this);
+								 }
+								 else{
+								  this.fireEvent('onLogout', this);
+								 }
+								}
+								
+								
+								}
+								}
+								]
+		},
+		{	xtype:'panel',
+		height:'2%',
+        html:'<div id="worklistSet"> Worklist Settings</div>'
+		},
+		
+		{
+		cls:'loginformpanel',
+       xtype: 'fieldset',
+       iconCls: 'add',
+		
+					items : [
+								
+								{	xtype: 'togglefield',
+							       	//cls : 'rightAligned',
+									name: 'pr',
+									id:'pr',
+									label: 'Purchase Requisition',
+									labelWidth: '30%',
+									value: 1,
+									disabled:'true',
+									//top:'10%',
+									//cls : 'x-toggle',	
+								},
+								{	xtype: 'togglefield',
+									//cls : 'rightAligned',
+									name: 'po',
+									id:'po',
+									label: 'Purchase Order',
+									disabled:'true',
+									labelWidth: '30%',
+								},
+								{	xtype: 'togglefield',
+									//cls : 'rightAligned',
+									name: 'expense',
+									id:'expense',
+									label: 'Expense Reports',
+									disabled:'true',
+									labelWidth: '30%',
+								}
+								]
+		},
+		
+       
+								/*  {	xtype: 'button',
+									name: 'signon',
+									id:'toggle',
+									text: 'Uses Single Sign-on',
+									width:'20%',
+									height:'3%',
+									//labelWidth: '30%',
+									listeners: {
+									tap: function () {
+																	
+										this.fireEvent('onmyclick', this);
+											//}
+																	
+								}
+								}
+								}  */
+								{
+									   cls:'loginformpanel',
+								       xtype: 'fieldset',
+								       iconCls: 'add',
+										
+									items : [
+									{xtype : 'textfield',																	
+									id : 'url',
+									label : 'Endpoint URL',														
+									labelWidth:'30%',							
+									value:'http://entmobilityts.ea.com:8888/ea-erp',		
+                                    //value:'http://10.226.112.12:80/ea-erp',
+									//value:'http://10.232.155.69:8888/ea-erp',
+									maxLength:77,
+									/*listeners : 
+									{
+										focus : function() 
+										{								
+											Ext.getCmp('cmsoverlay').show();
+										}
+									},*/
+
+									}]
+									
+								},
+		/*{	
+			xtype:'panel',
+			floating : true,
+			//scroll: 'vertical',
+			modal : true,
+			cls: 'bodyformpanel',
+			centered : true,
+			pack : 'center',
+			id : 'cmsoverlay',
+		//	styleHtmlContent : true,
+			hidden:true,
+			hideOnMaskTap : true,	
+			items : [
+			{
+			xtype:'textfield',
+			id:'textfieldurl',
+			}
+			]
+		},*/
+    ]},		
+
+    updateRecord: function(newRecord) 
+	{
+        if (newRecord) {
+            this.down('#content').setData(newRecord.data);
+			this.down('#textbox').setData(newRecord.data);
+			//this.down('#content2').setData(newRecord.data);
+
+         
+        }
+    },
+	
+	initialize: function() 
+	{	
+       	 this.on('painted', this.setUsername);       
+    },
+		 
+	setUsername: function() 
+	{	//alert("hiiiii");
+		//alert('Setusername ' + localStorage.getItem('username'));
+		if((localStorage.getItem('username') == null) || (localStorage.getItem('username') == '') || (localStorage.getItem('password') == '') || (localStorage.getItem('urlValue')) == '')
+		{
+			Ext.getCmp('username').setValue('EAMailAddress');
+		}
+		else
+		{
+				
+			Ext.getCmp('username').setValue(localStorage.getItem('username'));
+			Ext.getCmp('password').setValue(localStorage.getItem('password'));
+			Ext.getCmp('url').setValue(localStorage.getItem('urlValue'));		
+			Ext.getCmp('toggle').setValue(1);
+	    }
+	}
+});
+
+

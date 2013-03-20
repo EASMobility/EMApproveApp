@@ -1,0 +1,44 @@
+Ext.define('eaApprove.view.Main', {
+    extend: 'Ext.navigation.View',
+    xtype: 'mainview',
+	id:'mainview',
+    requires: [
+		'eaApprove.view.MyTabs',
+           ],
+
+    config: {
+     //   fullscreen: true,
+		width:'100%',
+		height:'93%',
+		 	navigationBar : {
+    docked : 'top',
+	useTitleForBackButtonText:true,
+    items : [
+        {
+					xtype:'button',
+                    text: 'Settings',
+                    align: 'left',
+					id: 'editButton',
+					hidden:'false',
+                    hideAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeOut',
+                        duration: 200
+                    },
+                    showAnimation: Ext.os.is.Android ? false : {
+                        type: 'fadeIn',
+                        duration: 200
+                    }
+        }
+    ]
+},
+	     items: [{
+		 title:'Worklist',
+		 items:[
+            { xtype: 'mytabsview' }
+			]
+        }] 
+    }
+});
+
+
+
