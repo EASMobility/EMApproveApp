@@ -1,5 +1,5 @@
 
-
+var applicationInstance ;
 Ext.application({
     name: 'eaApprove',
 
@@ -14,14 +14,30 @@ Ext.application({
         144: 'resources/icons/icon@114.png'
     },
 
-    models: ['Worklist','History','Prdetail','PRWorklist','POWorklist','ERWorklist','Showlist','Erdetail','ERhistory' ],
-    stores: ['Worklists','Historys','Prdetails','PRWorklists','POWorklists','ERWorklists','Showlists','Erdetails','ERhistorys' ],
-    views: ['Main'],
+    models: ['Worklist','History','Prdetail','PRWorklist','ERWorklist','Erdetail','ERhistory' ],
+    stores: ['Worklists','Historys','Prdetails','PRWorklists','ERWorklists','Erdetails','ERhistorys' ],
+   
     controllers: ['Application'],
-
+     views: ["Main","MyTabs","Category","Worklists","Worklistsdue","More","Settings","Secondview","About","ApproveCmts"],
+	 
     launch: function() {
-        Ext.Viewport.add({
-            xclass: 'eaApprove.view.Main'
-        });
+        var Main = {
+            xtype: "mainview"
+        };
+		var Secondview={
+		    xtype: "secondview"
+		};
+		
+		var Settings={
+		     xtype: "settings"
+		};
+		var About={
+		     xtype: "about"
+		};
+		var ApproveCmts={
+		     xtype: "approvecmts"
+		};
+		applicationInstance = this.getApplication();
+		 Ext.Viewport.add([Main,Secondview,Settings,About,ApproveCmts]);
     }
 });

@@ -1,3 +1,13 @@
+.x-tabbar-dark.x-docked-top .x-tab-active {
+background-image: none;
+background-color: #012F4C;
+background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #061f31), color-stop(10%, #092e47), color-stop(65%, #0b3c5e), color-stop(100%, #0c3e60));
+background-image: -webkit-linear-gradient(top, #012F4C,#012F4C 10%,#012F4C 65%,#012F4C);
+background-image: linear-gradient(top, #061f31,#092e47 10%,#0b3c5e 65%,#0c3e60);
+color: white;
+border-bottom-color: black;
+}
+
 .x-carousel-indicator span {
 display: block;
 width: 0.4em;
@@ -184,64 +194,72 @@ margin-top: -40%;
 }
 /* Newly added CSS - Start */
 .startDateSelSize{
-	width: 83px;
-	height:50px;
-	margin-top: -35%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -35%;
+margin-left: -112%;
+
 	/*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
 }
 
 .startDateDeSelSize{
-	width: 80px;
-	height:50px;
-	margin-top: -45%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -44%;
+margin-left: -145%;
+
 	/*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
 }
 
 .dueDateSelSize{
-	width: 83px;
-	height:50px;
-	margin-top: -35%;
-	margin-left: -115%;
+	width: 80px;
+height: 50px;
+margin-top: -35%;
+margin-left: -115%;
+	
 }
 
 .dueDateDeSelSize{
-	width: 80px;
-	height:50px;
-	margin-top: -45%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -44%;
+margin-left: -135%;
+
 	/*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
 }
 
 
 .categorySelSize{
-	width: 83px;
-	height:50px;
-	margin-top: -35%;
-	margin-left: -108%;
+	width: 80px;
+height: 50px;
+margin-top: -36%;
+margin-left: -108%;
+	
 }
 
 .categoryDeSelSize{
-	width: 80px;
-	height:50px;
-	margin-top: -45%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -44%;
+margin-left: -128%;
+
 	/*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
 }
 
 .moreSelSize{
-	width: 80px;
-	height:50px;
-	margin-top: -35%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -35%;
+margin-left: -104%;
+	
 }
 
 .moreDeSelSize{
-	width: 80px;
-	height:50px;
-	margin-top: -45%;
-	margin-left: -115%;
+	width: 79px;
+height: 50px;
+margin-top: -44%;
+margin-left: -120%;
+	
 	/*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
 }
 
@@ -377,7 +395,7 @@ width:295px;
 height:310px;
 
 -webkit-box-shadow: inset 0 0 10px #052c3d;
-
+    top:0px;
 }
 
 .x-carousel-indicator-dark span
@@ -394,9 +412,9 @@ opacity:1 !important;
 
 .HeaderHTMLposition
 {
- top: 10px;
+ top: 5px;
 left: 4%;
-height: 7%;
+height: 5%;
 }
 .HeaderHTMLposition1
 {
@@ -467,7 +485,7 @@ width:24%;
 font-size:11px;
 vertical-align:top;
 color:#C7E3FF;
-width: 29%;
+width: 30%;
 }
 .tablehistoryrightdstyle
 {
@@ -632,9 +650,9 @@ font-family:Gotham,"Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .imgea
 {
-	margin-top:3%;
+	/*margin-top:3%;
 	width:20%;
-	height:15%;
+	height:15%;*/
 }
 
 

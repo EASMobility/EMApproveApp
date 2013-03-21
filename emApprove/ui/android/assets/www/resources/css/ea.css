@@ -193,7 +193,7 @@ margin-top: -40%;
 /* Newly added CSS - Start */
 .startDateSelSize{
 width: 84px;
-height:50px;
+height:52px;
 margin-top: -45%;
 margin-left: -115%;
 /*background: white url("../images/StartDate_DeSelected01.png") no-repeat top center;*/
@@ -209,7 +209,7 @@ margin-left: -88%;
 
 .dueDateSelSize{
 width: 84px;
-height:50px;
+height:52px;
 margin-top: -45%;
 margin-left: -115%;
 }
@@ -225,7 +225,7 @@ margin-left: -88%;
 
 .categorySelSize{
 width: 84px;
-height:50px;
+height:52px;
 margin-top: -45%;
 margin-left: -115%;
 }
@@ -240,7 +240,7 @@ margin-left: -88%;
 
 .moreSelSize{
 width: 84px;
-height:50px;
+height:52px;
 margin-top: -45%;
 margin-left: -115%;
 }
@@ -261,7 +261,7 @@ height:50px;
 
 .x-tab-normal.x-tab.x-tab-active{
 width: 80px;
-height:50px !important;
+height:49px !important;
 margin-left: -3%;
 }
 
@@ -384,7 +384,7 @@ width: 300px;
 height: 440px;*/
 left:3%;
 width:94%;
-height: 77%;
+height: 72%;
 -webkit-box-shadow: inset 0 0 10px #052c3d;
 }
 
@@ -557,23 +557,29 @@ margin-left: 2%;
 }
 .morebackground{
 background-image:url('../imagesBg.png');
+background-size: 100% 100%;
 }
 .worklistbackground{
 background-image:url('../images/Bg.png');
+background-size: 100% 100%;
 }
 #category12{
 background-image:url('../images/Bg.png');
+background-size: 100% 100%;
 
 }
 #settingsbackground{
 /*background-image:url('../images/Bg.png');*/
 background-color: #024E80;
+background-size: 100% 100%;
 }
 #showbackground{
 background-image:url('../images/Bg.png');
+background-size: 100% 100%;
 }
 #about{
 background-image:url('../images/Bg.png');
+background-size: 100% 100%;
 }
 .prdtoolbar
 {
@@ -588,8 +594,8 @@ margin-top: 3%;
 {
 background-color: #072138 !important;
 background-image: -webkit-linear-gradient(top, #0F3357, #0F3357 25%, #062037);
-width: 124px;
-left: -46px;
+width: 142px;
+left: -31px;
 height: 45px;
 border: 1px solid #447247;
 font-size: 18px;
@@ -599,8 +605,8 @@ font-size: 18px;
 {
 background-color: #06375D !important;
 background-image: -webkit-linear-gradient(top, #07406B, #07406B 55%, #06375D);
-width: 124px;
-left: 48px;
+width: 142px;
+left: 27px;
 height: 45px;
 border:1px solid #4F748E;
 font-size:18px;
@@ -1391,7 +1397,7 @@ font-size: 1.0em;
 top: 0.4em;
 background-image: -webkit-linear-gradient(top, #77AD31, #77AD31 20%, #4D7C11);
 border: 1px solid rgb(15, 107, 2);
-padding: .25em 0.5em 0.25em 0.5em;
+padding:  0.3em 0.3em 0.3em 0.3em;
 z-index: 2;
 text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
 -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0.1em 0.1em;

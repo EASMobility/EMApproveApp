@@ -1,29 +1,11 @@
-
+/**
+ * Copyright 2012-2013 Electronic Arts, Inc. 
+ */
+/* ER Worklists model values to be filled within the store */
 Ext.define('eaApprove.store.ERWorklists', {
     extend: 'Ext.data.Store',
-
     config: {
         model: 'eaApprove.model.ERWorklist',
         autoLoad: true,
-	/* 	proxy: {
-            type: 'ajax',
-			actionMethods : {
-			read : 'POST'
-			},
-            url:'http://10.226.112.12:80/ea-erp',
-			
-			extraParams:{
-			QueryWorklistPRReq:queryvalue
-					
-			},
-			writer: {
-			type : 'json',
-			encodeRequest: true
-			},
-			reader: {
-            type: 'json',
-            rootProperty: 'QueryWorklistPRApprRes.PurchaseRequisition'
-        }
-        }  */
     }
 });

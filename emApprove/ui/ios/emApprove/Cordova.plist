@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KeyboardDisplayRequiresUserAction</key>
+	<true/>
+	<key>SuppressesIncrementalRendering</key>
+	<false/>
 	<key>UIWebViewBounce</key>
 	<true/>
 	<key>TopActivityIndicator</key>
@@ -20,15 +24,19 @@
 	<false/>
 	<key>OpenAllWhitelistURLsInWebView</key>
 	<false/>
+	<key>BackupWebStorage</key>
+	<string>cloud</string>
 	<key>ExternalHosts</key>
 	<array>
 		<string>*</string>
-		<string>10.226.112.12</string>
+		<string>10.222.1.68</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
-		<key>Geolocation</key>
-		<string>CDVLocation</string>
+		<key>Device</key>
+		<string>CDVDevice</string>
+		<key>Logger</key>
+		<string>CDVLogger</string>
 		<key>Compass</key>
 		<string>CDVLocation</string>
 		<key>Accelerometer</key>
@@ -41,10 +49,14 @@
 		<string>CDVContacts</string>
 		<key>Debug Console</key>
 		<string>CDVDebugConsole</string>
+		<key>Echo</key>
+		<string>CDVEcho</string>
 		<key>File</key>
 		<string>CDVFile</string>
 		<key>FileTransfer</key>
 		<string>CDVFileTransfer</string>
+		<key>Geolocation</key>
+		<string>CDVLocation</string>
 		<key>Notification</key>
 		<string>CDVNotification</string>
 		<key>Media</key>
@@ -55,6 +67,8 @@
 		<string>CDVSplashScreen</string>
 		<key>Battery</key>
 		<string>CDVBattery</string>
+		<key>Globalization</key>
+		<string>CDVGlobalization</string>
 	</dict>
 </dict>
 </plist>

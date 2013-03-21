@@ -1,56 +1,36 @@
+/**
+ * Copyright 2012-2013 Electronic Arts, Inc. 
+ */
+/* First view calling from the application */
 Ext.define('eaApprove.view.Main', {
-    extend: 'Ext.navigation.View',
-    xtype: 'mainview',
-	id:'mainview',
-    requires: [
-		'eaApprove.view.MyTabs',
-           ],
+    extend: "Ext.Container",
+    alias: 'widget.mainview',
+    id: 'mainview',
+  
+    initialize: function () {
 
-    config: {
-     //   fullscreen: true,
-		width:'100%',
-		height:'93%',
-		 	navigationBar : {
-    docked : 'top',
-	useTitleForBackButtonText:true,
-    items : [
-        {
-					xtype:'button',
-                    text: 'Settings',
-                    align: 'left',
-					id: 'editButton',
-					hidden:'false',
-                    hideAnimation: Ext.os.is.Android ? false : {
-                        type: 'fadeOut',
-                        duration: 200
-                    },
-                    showAnimation: Ext.os.is.Android ? false : {
-                        type: 'fadeIn',
-                        duration: 200
-                    }
-        }
-    ]
-},
-	     items: [{
-		 title:'More',
-		 items:[
-            { xtype: 'mytabsview' }
-			]
-        }] 
-    },
-	 onBackButtonTap: function() {
-        this.pop();
-		bar = Ext.getCmp('mainview').getNavigationBar();
-		bar.titleComponent.setTitle(titleTopToolbar);
-		//alert(titleTopToolbar);
-		settingscount=0;
-		abtcount=0;
-        this.fireEvent('back', this);
-    },
+        this.callParent(arguments);
 
+        var topToolbar = {
+            xtype: "toolbar",
+            title: 'More',
+            docked: "top",
+            id:"maintoolbar",
+        };
+
+     	
+		 var notestabpanel = {
+            xtype: "maintabview",
+			tabBarPosition: 'top',
+			id: 'maintabview',
+			 activeItem: 3,
 	
-    	
+			 };
+        this.add([topToolbar,notestabpanel]);
+    },
+    config: {
+        layout: {
+            type: 'fit'
+        } 
+    }
 });
-
-
-

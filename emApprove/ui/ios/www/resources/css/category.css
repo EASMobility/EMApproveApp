@@ -1,32 +1,3 @@
-.test12 {
-background-image: none;
-background-color: red !important;
-background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, red),
- color-stop(3%, red), color-stop(100%, red) ) !important;
-background-image: -webkit-linear-gradient(top, green, green 3%, green) !important;
-background-image: linear-gradient(top, red, green 3%, green) !important;
-border-color: black;
-}
-
-/*.x-toolbar-dark {
-background-image: none;
-background-color: #1468A2;
-background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1E93E4),
- color-stop(3%, #1676B9), color-stop(100%, #11598C) );
-background-image: -webkit-linear-gradient(top, #1E93E4, #1676B9 3%, #11598C);
-background-image: linear-gradient(top, #1E93E4, #1676B9 3%, #11598C);
-border-color: black;
-}*/
-.subtoolbar_category_old
-{
-font-size:17px;
-font-family:Gotham,"Helvetica Neue", Helvetica, Arial, sans-serif;
- /*background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6D7B8D), color-stop(3%, #6D7B8D), color-stop(100%, #6D7B8D));
- background-image:-webkit-linear-gradient(top, #6D7B8D,#6D7B8D 3%,#6D7B8D);*/
- background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(36%,#828c95), color-stop(100%,#28343b)) !important; /* Chrome,Safari4+ */
- background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 36%,#28343b 100%)  !important; /* Chrome10+,Safari5.1+ */
- width: 480px;
-}
 .categorytitle
 {
 font-size:17px;
@@ -44,8 +15,6 @@ border-bottom-color: #76B02A !important;
 .categorytitle .x-title {
   position: absolute !important;
   font-size:normal !important;
-
-
 }
 .categorytitle .x-title .x-innerhtml{
  
@@ -59,21 +28,15 @@ margin-top:3%;
 
 }
 
-#ext-container-2{
+#ExpenseReportContainer{
 margin-top:3%;
 
 }
 
-#ext-container-8{
+#PurchaseRequisitionContainer{
 margin-top:3%;
 
 }
-
-.redRoundCircle{
-
-
-}
-
 .pagenext {
   background-image: url(images/NotificationBox.png) !important;
 }

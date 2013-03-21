@@ -8,8 +8,8 @@ import android.os.Handler;
 public class EmApprove extends Activity  {
 
 	@Override
-
-
+	
+	/* Loading the Splash Screen */
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_em_approve);
